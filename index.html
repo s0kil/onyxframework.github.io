@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Onyx Framework API</title>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.5.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tabbyjs@11.2.0/dist/css/tabby.min.css">
+
+  <style>
+    iframe {
+      display: block;
+      border: none;
+      height: calc(100vh - 60px);
+      width: 100vw;
+      margin-top: 60px;
+    }
+
+    .tabs {
+      position: absolute;
+      top: 0;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      list-style: none;
+      width: 100%;
+      height: 60px;
+      background: #2E1052;
+      margin: 0;
+    }
+
+    .tabs strong {
+      font-size: 22px;
+      color: whitesmoke;
+    }
+
+    .tabs li {
+      flex: 1;
+    }
+
+    .tabs a {
+      color: lightgray;
+      text-decoration: none;
+    }
+
+    .tabs .activeTab strong {
+      text-decoration: underline;
+      text-decoration-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul data-tabs class="tabs">
+    <li><a data-tab href="#onyx"><strong>onyx</strong> - Top Level Macros</a></li>
+    <li><a data-tab href="#http"><strong>http</strong> - HTTP framework</a></li>
+    <li><a data-tab href="#rest"><strong>rest</strong> - REST API framework</a></li>
+    <li><a data-tab href="#sql"><strong>sql</strong> - SQL ORM</a></li>
+  </ul>
+
+  <div data-tabs-content>
+    <div data-tabs-pane class="tabs-pane active" id="onyx">
+      <iframe src="https://api.onyxframework.org/onyx" frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+
+    <div data-tabs-pane class="tabs-pane" id="http">
+      <iframe src="https://api.onyxframework.org/http" frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+
+    <div data-tabs-pane class="tabs-pane" id="rest">
+      <iframe src="https://api.onyxframework.org/rest" frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+
+    <div data-tabs-pane class="tabs-pane" id="sql">
+      <iframe src="https://api.onyxframework.org/sql" frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tabbyjs@11.2.0/dist/js/tabby.min.js"></script>
+  <script>
+    tabby.init({
+      toggleActiveClass: 'activeTab'
+    });
+  </script>
+</body>
+
+</html>
